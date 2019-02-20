@@ -1,0 +1,1 @@
+Basically im supposed to having a list of short coding challenges here like fizzbuzz.

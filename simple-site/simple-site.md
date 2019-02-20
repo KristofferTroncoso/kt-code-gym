@@ -1,0 +1,1 @@
+Basically build like a simple site layout with a navbar and everything.
