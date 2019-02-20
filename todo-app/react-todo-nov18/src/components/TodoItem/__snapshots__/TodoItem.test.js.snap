@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoItem isComplete={false} /> 1`] = `
+<div
+  className="div"
+>
+  <input
+    checked={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <p
+    style={
+      Object {
+        "textDecoration": null,
+      }
+    }
+  >
+    Todo here
+  </p>
+  <button
+    className="TodoItem__deleteBtn"
+    onClick={[Function]}
+  >
+    x
+  </button>
+</div>
+`;
+
+exports[`<TodoItem isComplete={false} todoText="Play with the dog" /> 1`] = `
+<div
+  className="div"
+>
+  <input
+    checked={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <p
+    style={
+      Object {
+        "textDecoration": null,
+      }
+    }
+  >
+    Play with the dog
+  </p>
+  <button
+    className="TodoItem__deleteBtn"
+    onClick={[Function]}
+  >
+    x
+  </button>
+</div>
+`;
+
+exports[`<TodoItem isComplete={true} /> 1`] = `
+<div
+  className="div"
+>
+  <input
+    checked={true}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <p
+    style={
+      Object {
+        "textDecoration": "line-through",
+      }
+    }
+  >
+    Todo here
+  </p>
+  <button
+    className="TodoItem__deleteBtn"
+    onClick={[Function]}
+  >
+    x
+  </button>
+</div>
+`;
