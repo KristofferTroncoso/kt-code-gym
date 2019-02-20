@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Todo from '../Todo/Todo';
+import TodoList from '../TodoList/TodoList';
 
 interface IState {
   todos: Array<ITodo>
@@ -30,18 +30,10 @@ class App extends Component<{}, IState> {
   }
 
   render() {
-    const todoList = this.state.todos.map(todo => (
-      <Todo 
-        id={todo.id}
-        todoText={todo.todoText}
-        isComplete={todo.isComplete}
-      />
-    ))
-
     return (
       <div className="App">
         <h1>Todos</h1>
-        {todoList}
+        <TodoList todos={this.state.todos} />
       </div>
     );
   }

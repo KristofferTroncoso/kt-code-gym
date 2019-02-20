@@ -9,6 +9,7 @@ interface Todo {
 function Todo({id = 5, todoText = "yoyo", isComplete = false}: Todo) {
   return (
     <ul>
+      <input type="checkbox" checked={isComplete} />
       {todoText}
     </ul>
   )
