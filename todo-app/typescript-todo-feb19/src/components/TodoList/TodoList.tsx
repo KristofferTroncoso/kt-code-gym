@@ -14,6 +14,7 @@ interface ITodo {
 function TodoList({todos}: Props) {
   const todoList = todos.map(todo => (
     <Todo 
+      key={todo.id}
       id={todo.id}
       todoText={todo.todoText}
       isComplete={todo.isComplete}

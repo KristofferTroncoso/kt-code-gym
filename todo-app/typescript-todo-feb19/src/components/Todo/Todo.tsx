@@ -11,6 +11,7 @@ function Todo({id = 5, todoText = "yoyo", isComplete = false}: Todo) {
     <ul>
       <input type="checkbox" checked={isComplete} />
       {todoText}
+      <button>X</button>
     </ul>
   )
 }
