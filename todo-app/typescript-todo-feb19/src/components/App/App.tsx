@@ -13,8 +13,8 @@ interface ITodo {
   isComplete: boolean
 }
 
-class App extends Component<{}, IState> {
-  constructor(props: {}) {
+class App extends Component<null, IState> {
+  constructor(props: null) {
     super(props);
     this.state = {
       todos: [
@@ -44,13 +44,23 @@ class App extends Component<{}, IState> {
     this.setState({todos: [...this.state.todos, newTodo], nextId}, () => console.log(this.state));
   }
 
+  toggleTodo = (id: number) => {
+    let todos = this.state.todos.map(todo => {
+      if (todo.id === id ) {
+        return {...todo, isComplete: !todo.isComplete}
+      } else {
+        return todo;
+      }
+    });
+    this.setState({todos})
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Todos</h1>
         <TodoForm addTodo={this.addTodo} />
-        <TodoList todos={this.state.todos} />
-        <button onClick={() => this.addTodo('yo')}>YO</button>
+        <TodoList todos={this.state.todos} toggleTodo={this.toggleTodo} />
       </div>
     );
   }

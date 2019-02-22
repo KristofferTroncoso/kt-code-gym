@@ -3,6 +3,7 @@ import Todo from '../Todo/Todo';
 
 interface Props {
   todos: Array<ITodo>
+  toggleTodo: Function
 }
 
 interface ITodo {
@@ -11,13 +12,14 @@ interface ITodo {
   isComplete: boolean
 }
 
-function TodoList({todos}: Props) {
+function TodoList({todos, toggleTodo}: Props) {
   const todoList = todos.map(todo => (
     <Todo 
       key={todo.id}
       id={todo.id}
       todoText={todo.todoText}
       isComplete={todo.isComplete}
+      toggleTodo={toggleTodo}
     />
   ))
 
