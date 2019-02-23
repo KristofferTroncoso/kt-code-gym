@@ -55,12 +55,17 @@ class App extends Component<null, IState> {
     this.setState({todos})
   }
 
+  deleteTodo = (id: number) => {
+    let todos = this.state.todos.filter(todo => id !== todo.id);
+    this.setState({todos})
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Todos</h1>
         <TodoForm addTodo={this.addTodo} />
-        <TodoList todos={this.state.todos} toggleTodo={this.toggleTodo} />
+        <TodoList todos={this.state.todos} toggleTodo={this.toggleTodo} deleteTodo={this.deleteTodo} />
       </div>
     );
   }

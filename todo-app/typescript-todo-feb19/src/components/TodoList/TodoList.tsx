@@ -4,6 +4,7 @@ import Todo from '../Todo/Todo';
 interface Props {
   todos: Array<ITodo>
   toggleTodo: Function
+  deleteTodo: Function
 }
 
 interface ITodo {
@@ -12,7 +13,7 @@ interface ITodo {
   isComplete: boolean
 }
 
-function TodoList({todos, toggleTodo}: Props) {
+function TodoList({todos, toggleTodo, deleteTodo}: Props) {
   const todoList = todos.map(todo => (
     <Todo 
       key={todo.id}
@@ -20,6 +21,7 @@ function TodoList({todos, toggleTodo}: Props) {
       todoText={todo.todoText}
       isComplete={todo.isComplete}
       toggleTodo={toggleTodo}
+      deleteTodo={deleteTodo}
     />
   ))
 
