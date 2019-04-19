@@ -1,13 +1,11 @@
 import { createStackNavigator } from 'react-navigation';
-import LoginScreen from '../screens/LoginScreen';
-import MainTabNavigator from './MainTabNavigator';
+import PopupScreen from '../screens/PopupScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+
 
 const StackNavigator = createStackNavigator({
-  Login: LoginScreen,
-  Main: MainTabNavigator
-}, 
-{
-  initialRouteName: 'Login'
+  PopupScreen,
+  ProfileScreen
 });
 
 export default StackNavigator;

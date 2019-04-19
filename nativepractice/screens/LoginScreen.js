@@ -5,6 +5,7 @@ function LoginScreen({navigation}) {
   function handlePress() {
     navigation.navigate('Main');
   }
+  
   return (
     <View style={{flex: 1, backgroundColor: 'tomato', justifyContent: 'center', alignItems: 'center'}}>
       <Text style={{color: 'white'}}>LoginScreen</Text>
