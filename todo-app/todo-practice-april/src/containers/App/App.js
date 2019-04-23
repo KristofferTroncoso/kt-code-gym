@@ -3,7 +3,6 @@ import './App.css';
 import Header from '../../components/Header/Header';
 import TodoForm from '../TodoForm/TodoForm';
 import TodoList from '../TodoList/TodoList';
-import withTodos from '../../HOCs/withTodos';
 
 function App({todos, addNewTodo, toggleTodo, deleteTodo}) {
   return (
@@ -19,4 +18,4 @@ function App({todos, addNewTodo, toggleTodo, deleteTodo}) {
   );
 }
 
-export default withTodos(App);
+export default App;
